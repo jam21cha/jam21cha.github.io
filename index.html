@@ -6,26 +6,20 @@
     <title>Student Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links-container");
-
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-    });
-</script>
-
 <body>
 
 <nav>
+    <!-- Left: Logo -->
     <h1 class="logo">MyPortfolio</h1>
 
+    <!-- Right: Hamburger -->
     <button class="menu-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
+    <!-- Nav Menu -->
     <div class="nav-links-container">
         <ul class="nav-links">
             <li><a href="#home" class="nav-link">Home</a></li>
@@ -33,10 +27,13 @@
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
+
+            <!-- Theme toggle INSIDE menu (mobile) -->
+            <li class="mobile-theme-toggle">
+                <span id="theme-toggle" class="solar--moon-bold-duotone"></span>
+            </li>
         </ul>
     </div>
-
-    <span id="theme-toggle" class="solar--moon-bold-duotone"></span>
 </nav>
 
 <section id="home">
@@ -215,9 +212,20 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 });
 </script>
 
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links-container");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
+</script>
+
+    
 </body>
 
 </html>
+
 
 
 
