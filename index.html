@@ -11,6 +11,12 @@
 <nav>
     <h1 class="logo">MyPortfolio</h1>
 
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <div class="nav-links-container">
         <ul class="nav-links">
             <li><a href="#home" class="nav-link">Home</a></li>
@@ -200,10 +206,29 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".menu-toggle");
+    const navContainer = document.querySelector(".nav-links-container");
+
+    menuBtn.addEventListener("click", () => {
+        navContainer.classList.toggle("open");
+    });
+
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            navContainer.classList.remove("open");
+        });
+    });
+});
+</script>
+
 
 </body>
 
 </html>
+
 
 
 
