@@ -67,8 +67,11 @@ nav {
 
 
     .nav-controls {
-        gap: 14px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
     }
+
 
 
     #theme-toggle {
