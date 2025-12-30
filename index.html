@@ -224,27 +224,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".nav-links-container");
-    const links = document.querySelectorAll(".nav-link");
-
-    menuBtn.addEventListener("click", () => {
-        menu.classList.toggle("open");
-    });
-
-    links.forEach(link => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("open");
-        });
-    });
-});
-</script>
-
-    
 </body>
 </html>
+
 
 
 
