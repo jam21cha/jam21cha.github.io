@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam21cha.dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <h1 class="logo">Jam21cha.dev</h1>
+
+    <div class="nav-links-container">
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-controls">
+        <span id="theme-toggle"
+              class="solar--moon-bold-duotone"
+              title="Toggle theme"></span>
+
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+</nav>
+
+<section id="home">
+    <img id="profile-img" src="assets/profile-light.jpg" alt="Profile Picture">
+    <h2>
+    Hi, I'm Jamaicha Jane Gendoy
+    <span class="streamline-color--waving-hand-flat"></span>
+</h2>
+    <p class="tagline">Aspiring Web Developer | IT Student</p>
+    <p>"Debugging my own decisions."</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="grid">
+        <div class="card">
+            <p><strong>Welcome to my portfolio! I’m an IT student with a growing interest in web development. This website highlights my projects, skills, and progress as I learn and explore new technologies.</strong></p>
+        </div>
+        <div class="card">
+            <p><strong>Education:</strong> BS Information Technology (2nd Year) at Eastern Visayas State University</p>
+            <p><strong>Interests:</strong> Web Development, Databases, Cybersecurity</p>
+         <p><strong>Hobbies:</strong> Painting, Drawing, Reading</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Programming</h3>
+            <p>HTML, CSS, Python, JavaScript, C</p>
+        </div>
+        <div class="card">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, VirtualBox, Docker, Codeblock</p>
+        </div>
+        <div class="card">
+            <h3>Technical Areas</h3>
+            <p>Web Development, Networking, Databases</p>
+        </div>
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <p>Teamwork, Collaboration, Problem-Solving</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+           <div class="card project-card" data-images="assets/appms.png,assets/appms-2.png,assets/appms-3.png">
+                <img src="assets/appms.png" alt="Project" class="project-img">
+                <h3>Anual Procurement Plan(APP) monitoring System</h3>
+                <p>System for monitoring APP funds data.</p>
+                <p><strong>Role:</strong> Incharge of system proposal and assisted UI layout</p>
+                <p><strong>Tools:</strong> Microsoft word, VScode, OOP, Tkinter, Python</p>
+           </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card project-card" data-images="assets/wix.png,assets/wix-2.png,assets/wix-3.png,assets/wix-4.png">
+                <img src="assets/wix.png" alt="Project" class="project-img">
+                <h3>Personal Portfolio Website</h3>
+                <h3>A personal portfolio website created to showcase my creative works, skills, and projects</h3>
+                <p><strong>Role:</strong> Designed the layout and structure of the website</p>
+                <p><strong>Tools:</strong> Wix Website Builder, IbispaintX</p>
+           </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="form-status"></p>
+        </form>
+
+
+        <p>Email: <strong>jamaichajane.gendoy@evsu.edu.ph</strong></p>
+        <p>Phone: <strong>09927825903</strong></p>
+        <p>
+            <div class="link">
+                    <a href="https://github.com/jam21cha" class="mdi--github"> GitHub</a>
+                    <a href="https://www.linkedin.com/in/jamaicha-jane-gendoy-1239a5366" class="mdi--linkedin">LinkedIn</a>
+                    <a href="https://web.telegram.org/a/#8074881435" class="ic--baseline-telegram">Telegram</a>
+                    <a href="https://www.facebook.com/jamaicha.gendoy.5" class="ic--baseline-facebook">Facebook</a>
+            </div>
+
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 JamaichaGendoy</p>
+</footer>
+
+<div id="image-modal" class="image-modal">
+    <span class="close-modal">&times;</span>
+
+    <img id="modal-image" src="" alt="Preview">
+
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const toggle = document.getElementById("theme-toggle");
+
+    const profileImg = document.getElementById("profile-img");
+
+function applyTheme(theme) {
+
+    profileImg.classList.add("flip");
+
+    setTimeout(() => {
+        if (theme === "dark") {
+            body.classList.add("dark");
+            toggle.className = "solar--sun-bold";
+            profileImg.src = "assets/profile-dark.jpg";
+        } else {
+            body.classList.remove("dark");
+            toggle.className = "solar--moon-bold-duotone";
+            profileImg.src = "assets/profile-light.jpg";
+        }
+
+        profileImg.classList.remove("flip");
+    }, 300);
+    localStorage.setItem("theme", theme);
+}
+
+
+    toggle.addEventListener("click", function () {
+        const isDark = body.classList.contains("dark");
+        applyTheme(isDark ? "light" : "dark");
+    });
+
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function activateNav() {
+        let scrollPosition = window.scrollY + 200;
+
+        sections.forEach(section => {
+            if (
+                scrollPosition >= section.offsetTop &&
+                scrollPosition < section.offsetTop + section.offsetHeight
+            ) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${section.id}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateNav);
+    activateNav();
+});
+</script>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault()
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const status = document.getElementById("form-status");
+
+    if (!name || !email || !message) {
+        status.textContent = "Please fill in all fields.";
+        status.style.color = "red";
+        return;
+    }
+
+    const messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.push({
+        name,
+        email,
+        message,
+        date: new Date().toLocaleString()
+    });
+    localStorage.setItem("messages", JSON.stringify(messages));
+
+    status.textContent = "Message sent successfully!";
+    status.style.color = "green";
+
+    this.reset();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".nav-links-container");
+    const links = document.querySelectorAll(".nav-link");
+
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("open");
+        });
+    });
+});
+</script>
+
+<script>
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-image");
+const closeBtn = document.querySelector(".close-modal");
+const nextBtn = document.querySelector(".nav-btn.next");
+const prevBtn = document.querySelector(".nav-btn.prev");
+
+let images = [];
+let currentIndex = 0;
+
+document.querySelectorAll(".project-card").forEach(card => {
+    card.querySelector(".project-img").addEventListener("click", () => {
+        images = card.dataset.images.split(",");
+        currentIndex = 0;
+        openModal();
+    });
+});
+
+function openModal() {
+    modal.classList.add("open");
+    modalImg.src = images[currentIndex];
+}
+
+function closeModal() {
+    modal.classList.remove("open");
+}
+
+nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex];
+};
+
+prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex];
+};
+
+closeBtn.onclick = closeModal;
+
+modal.onclick = (e) => {
+    if (e.target === modal) closeModal();
+};
+</script>
+
+</body>
+</html>
