@@ -449,7 +449,6 @@ footer {
     transform: scale(1.03);
 }
 
-/* Modal */
 .image-modal {
     position: fixed;
     inset: 0;
@@ -493,4 +492,5 @@ footer {
 }
 
 .nav-btn.prev { left: 30px; }
+
 .nav-btn.next { right: 30px; }
