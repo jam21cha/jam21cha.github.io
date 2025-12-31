@@ -182,9 +182,7 @@ function applyTheme(theme) {
     const savedTheme = localStorage.getItem("theme") || "light";
     applyTheme(savedTheme);
 });
-</script>
 
-<script>
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -210,9 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", activateNav);
     activateNav();
 });
-</script>
 
-<script>
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault()
 
@@ -241,9 +237,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 
     this.reset();
 });
-</script>
 
-<script>
 document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".nav-links-container");
@@ -259,9 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-</script>
 
-<script>
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-image");
 const closeBtn = document.querySelector(".close-modal");
@@ -306,4 +298,5 @@ modal.onclick = (e) => {
 </script>
 
 </body>
+
 </html>
